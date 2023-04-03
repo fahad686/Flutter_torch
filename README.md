@@ -1,4 +1,4 @@
-# fa_torch
+# Flutter_torch
 
 A new Flutter project.
 
