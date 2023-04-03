@@ -16,17 +16,15 @@ class _TorchScreenState extends State<TorchScreen> {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Colors.yellowAccent,
+      backgroundColor: Colors.black38,
       appBar: AppBar(
-          backgroundColor: Colors.yellowAccent,
+          backgroundColor: Colors.yellow[300],
           centerTitle: true,
           elevation: 0.0,
           title: const Text(
             "Torch Light",
             style: TextStyle(
-                color: Colors.black87,
-                fontSize: 22,
-                fontWeight: FontWeight.bold),
+                color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),
           )),
       body: Column(children: [
         Expanded(
@@ -43,7 +41,7 @@ class _TorchScreenState extends State<TorchScreen> {
                         : 'assets/torch_off.png'),
                     width: 160,
                     height: 160,
-                    color: isActive ? Colors.black : Colors.black,
+                    color: isActive ? Colors.green[300] : Colors.yellow[300],
                   ),
                   SizedBox(
                     height: size.height * 0.1,
@@ -54,7 +52,7 @@ class _TorchScreenState extends State<TorchScreen> {
                     child: Transform.scale(
                       scale: 1.5,
                       child: IconButton(
-                        color: Colors.black,
+                        color: Colors.yellow[300],
                         onPressed: () {
                           controller.toggle();
                           isActive = !isActive;
@@ -75,7 +73,9 @@ class _TorchScreenState extends State<TorchScreen> {
         Text(
           "Developed By Fahad Brogrammar",
           style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),
+              color: Colors.yellow[300],
+              fontWeight: FontWeight.bold,
+              fontSize: 16),
         ),
         SizedBox(
           height: size.height * 0.05,
